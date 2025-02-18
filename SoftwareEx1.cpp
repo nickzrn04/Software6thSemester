@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <sys/types.h>
 #include <sys/wait.h>
 #include <fcntl.h>
 #include <string.h>
@@ -22,7 +21,7 @@ int main(int argc, char *argv[])
 	}
 
 	pid_t *children_arr = (pid_t *)malloc(N * sizeof(pid_t));
-	if (if (children_arr == NULL))
+	if (children_arr == NULL)
 	{
 		perror("malloc");
 		exit(EXIT_FAILURE);
